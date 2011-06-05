@@ -1,0 +1,40 @@
+RFC4765
+
+This is a Java library that implements much of the experimental data structure
+of RFC4765 as a set of Java objects.
+
+The Javadocs are fairly complete and are the best place to begin.
+
+The library introduces a few new constants and definitions (generally named  X_ )
+to work around ambiguities in the protocol as defined in the RFC, or to add
+capabilities not already present. See the class Alert for examples of these.
+
+The main message container classes are the subclasses of IDMEFMessage,
+named IDMEFMessage_*. Instantiate one of those with the necessary
+components and you've got an IDMEF message.
+
+The structure of the Java classes follows the RFC, though the RFC specifies an
+XML interchange format. A populated IDMEFMessage_* object is easily converted
+to XML via XStream (http://xstream.codehaus.org/). 
+Code to do this exists but is not yet included in this open source project,
+but will be posted in due course. Bug the author if you need it now.
+
+
+LICENCE AND COPYRIGHT
+Copyright (C) 2007-2011 by Challenge/Response LLC
+Copyright (C) 2011 by Jim Youll, successor copyright holder
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+Contact: jim@cr-labs.com
